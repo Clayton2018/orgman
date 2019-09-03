@@ -1,8 +1,10 @@
 package ac.za.cput.adp3.xyzcongolmerate.util;
 
+import ac.za.cput.adp3.xyzcongolmerate.factory.demography.GenderFactory;
+
 import java.util.UUID;
 
-public class Helper {
+public class Helper extends GenderFactory {
 
     public static String generateRandomGivenSuffix(String suffix) {
         return suffix + "-" + UUID.randomUUID().toString();
@@ -13,14 +15,23 @@ public class Helper {
     }
 
     public static String getSuffixFromClassName(Class<?> aClass) {
+
         String className = getClassName(aClass);
-        throw new UnsupportedOperationException("Not yet supported!");
-        /**
-         * Your implementation goes here
-         *
-         * INSTRUCTION
-         * 1. Remove line 17 [throw new UnsupportedOperationException("Not yet supported!");]
-         * 2. Get the capitalized letter(s) from the className and return it.
-         */
+        String result = "";
+
+        for(int i = 0; i < className.length(); i++){
+
+            if(Character.isUpperCase(className.charAt(i))){
+
+                char name = className.charAt(i);
+                result +=  name;
+
+            }
+
+        }
+
+        return result;
+
     }
+
 }

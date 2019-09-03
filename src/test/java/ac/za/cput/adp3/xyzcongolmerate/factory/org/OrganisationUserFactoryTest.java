@@ -11,7 +11,6 @@ import static org.junit.Assert.*;
 
 public class OrganisationUserFactoryTest {
 
-    //TODO: implement method body ONLY!
     @Test
     public void buildOrganisationUser() {
 

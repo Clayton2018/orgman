@@ -1,23 +1,31 @@
 package ac.za.cput.adp3.xyzcongolmerate.factory.user;
 
+import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Gender;
+import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Race;
+import ac.za.cput.adp3.xyzcongolmerate.domain.user.User;
+import ac.za.cput.adp3.xyzcongolmerate.domain.user.UserDemography;
+import ac.za.cput.adp3.xyzcongolmerate.factory.demography.GenderFactory;
+import ac.za.cput.adp3.xyzcongolmerate.factory.demography.RaceFactory;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class UserDemographyFactoryTest {
 
-    //TODO: implement method body ONLY!
     @Test
     public void buildUserDemography() {
-        throw new UnsupportedOperationException("Not supported yet.");
-        /**
-         * Your implementation goes here
-         *
-         * INSTRUCTION
-         * 1. Remove line [//TODO: implement method body ONLY!]
-         * 2. Remove line [throw new UnsupportedOperationException("Not yet supported.");]
-         * 3. Test the UserDemographyFactory class
-         * 4. Assert that the an object is created.
-         */
+
+        UserDemography udemo = UserDemographyFactory.buildUserDemography();
+
+        User cmp = UserFactory.buildUser("216155231@mycput.ac.za", "Clayton", "Petersen");
+
+        Gender male = GenderFactory.buildGender("Male");
+
+        Race coloured = RaceFactory.buildRace("Coloured");
+
+
+
+
+
     }
 }
